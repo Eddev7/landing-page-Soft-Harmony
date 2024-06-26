@@ -128,17 +128,22 @@ export const CardMain = styled.div`
     @media (max-width: 506px) {
         width: 100%;
         height: 17rem;
+        
+        
         .cardTitles h1 {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
         }
         .cardTitles h2 {
-            font-size: 0.8rem;
+            font-size: 1rem;
         }
         button {
             margin-top: 0.5rem;
             font-size: 0.8rem;
             padding: 0.8rem 1rem;
             border-radius: 0.4rem;
+        }
+        .cardTitles {
+            right: 2rem;
         }
     }
 `;
@@ -149,4 +154,8 @@ export const ImageMain = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
+
+    @media (max-width: 590px) {
+        background-position: center;
+    }
 `;

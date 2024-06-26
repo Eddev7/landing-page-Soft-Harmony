@@ -24,6 +24,9 @@ export default function CardResult() {
     );
 }
 
+// variavel de controle dos videos
+let count = 2;
+
 function CardsView (props) {
 
     const videos = {
@@ -32,9 +35,7 @@ function CardsView (props) {
         3: "https://youtube.com/shorts/SHOIC2PsxS0?feature=share"
     }
 
-    let count = 2;
     const [video, setVideo] = useState(videos[count]);
-    console.log("haha")
 
     if(props.width < 1200) {
         return (

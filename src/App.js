@@ -1,9 +1,11 @@
 import React from "react";
-import Nav from "./components/Navigation/Index";
+import Nav from "./components/Nav/Index";
+import Main from "./components/Main";
 import GlobalStyles from "./styles/GlobalStyles";
 export default function App() {
     return <>
-        <Nav/>
         <GlobalStyles/>
+        <Nav/>
+        <Main/>
     </>;
 }

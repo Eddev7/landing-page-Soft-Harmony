@@ -20,4 +20,25 @@ export default createGlobalStyle`
         background-image: url(${back});
         background-size: cover;
     }
+
+    .whatsapp {
+        width: 7rem;
+        height: 7rem;
+        color: #25D366;
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+
+        @media (max-width: 590px) {
+            width: 5.5rem;
+            height: 5.5rem;
+        }
+        
+        cursor: pointer;
+        transition: all 400ms;
+    }
+
+    .whatsapp:hover {
+        filter: drop-shadow(2px 2px 5px #FFC012);
+    }
 `;

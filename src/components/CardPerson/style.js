@@ -21,7 +21,8 @@ export const Picture = styled.div`
     background-image: url(${props => props.picture});
     background-size: contain;
     background-repeat: no-repeat;
-    width: 100%;
+    background-position: center;
+    width: 71%;
     border-radius: 13px 0 0 13px;
 `;
 

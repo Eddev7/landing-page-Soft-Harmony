@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Result, Cards } from "./styled";
-import ReactPlayer from "react-player";
 import { BsChevronRight } from "react-icons/bs";
 import { BsChevronLeft } from "react-icons/bs";
+import video1 from '../../assets/videos/video1.mp4';
+import video2 from '../../assets/videos/video2.mp4';
+import video3 from '../../assets/videos/video3.mp4';
+import VideoPlayer from "../VideoPlayer";
 
 export default function CardResult() {
 
@@ -30,9 +33,9 @@ let count = 2;
 function CardsView (props) {
 
     const videos = {
-        1: "https://youtube.com/shorts/urHAq3c2mAI?feature=share",
-        2: "https://youtube.com/shorts/WvT1Q9dUceU?feature=share",
-        3: "https://youtube.com/shorts/SHOIC2PsxS0?feature=share"
+        1: video1,
+        2: video2,
+        3: video3
     }
 
     const [video, setVideo] = useState(videos[count]);
@@ -47,12 +50,7 @@ function CardsView (props) {
                 }}>
                     <BsChevronLeft/>
                 </button>
-                <ReactPlayer 
-                    url={video} 
-                    width={props.width > 582 ? 372 : 236} 
-                    height={props.width > 582 ? 650 : 413}
-                    loop={true}
-                />
+                <VideoPlayer url={video} width={props.width}/>
                 <button onClick={() => {
                     count = count >= 3 ? count : count + 1;
                     setVideo(videos[count]);
@@ -66,22 +64,9 @@ function CardsView (props) {
 
     return (
         <Cards>
-            <ReactPlayer 
-            url="https://youtube.com/shorts/urHAq3c2mAI?feature=share" 
-            width={372} 
-            height={650}
-            loop={true}
-            />
-            <ReactPlayer 
-            url="https://youtube.com/shorts/WvT1Q9dUceU?feature=share" 
-            width={372} 
-            height={650}
-            loop={true}
-            />
-            <ReactPlayer url="https://youtube.com/shorts/SHOIC2PsxS0?feature=share" 
-            width={372} 
-            height={650} 
-            loop={true}/>
+            <VideoPlayer url={video1} width={props.width}/>
+            <VideoPlayer url={video2} width={props.width}/>
+            <VideoPlayer url={video3} width={props.width}/>
         </Cards>
     );
 }

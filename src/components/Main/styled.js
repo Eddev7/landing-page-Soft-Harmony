@@ -13,4 +13,11 @@ export const MainContent = styled.main`
         flex-wrap: wrap-reverse;
         justify-content: center;
     }
+
+    @media (max-width: 590px) {
+        .CardsPerson {
+            margin-top: 1.5rem;
+            gap: 3rem;
+        }
+    }
 `;

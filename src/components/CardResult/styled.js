@@ -27,7 +27,7 @@ export const Result = styled.div`
         h3 {
             font-size: 1.9rem;
         }
-        margin-top: 6rem;
+        margin-top: 3rem;
         margin-bottom: 2rem;
         width: 100%;
     }

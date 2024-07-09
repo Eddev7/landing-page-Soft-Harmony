@@ -5,7 +5,7 @@ export const Button = styled.button`
         position: absolute;
         width: 7rem;
         height: 7rem;
-        display: ${props => props.visibility ? 'block' : 'none'};
+        visibility: ${props => props.visibility ? 'visible' : 'hidden'};
         color: white;
         filter: drop-shadow(2px 2px 5px #D2B565);
 
@@ -13,6 +13,10 @@ export const Button = styled.button`
             width: 5rem;
             height: 5rem;
         }
+    }
+
+    .video {
+        border-radius: 1rem;
     }
     display: flex;
     justify-content: center;

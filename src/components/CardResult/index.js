@@ -46,7 +46,6 @@ function CardsView (props) {
                 <button onClick={() => {
                     count = count <= 1 ? count : count - 1;
                     setVideo(videos[count]);
-                    console.log(count);
                 }}>
                     <BsChevronLeft/>
                 </button>
